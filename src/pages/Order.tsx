@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import SectionTitle from "@/components/ui/SectionTitle";
-import Button from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import { toast } from "@/components/ui/use-toast";
 import { Upload, Check } from "lucide-react";
 
@@ -50,7 +50,7 @@ const Order = () => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
       setPhotoFile(file);
-      
+
       const reader = new FileReader();
       reader.onload = () => {
         setPhotoPreview(reader.result as string);
@@ -62,14 +62,14 @@ const Order = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       toast({
         title: "Order submitted successfully!",
         description: "We'll review your order and contact you soon.",
       });
-      
+
       // Reset form
       setSelectedService("");
       setSelectedSize("");
@@ -80,7 +80,7 @@ const Order = () => {
       setNotes("");
       setPhotoFile(null);
       setPhotoPreview(null);
-      
+
       setIsSubmitting(false);
     }, 1500);
   };
@@ -88,7 +88,7 @@ const Order = () => {
   return (
     <Layout>
       <div className="section-container">
-        <SectionTitle 
+        <SectionTitle
           subtitle="Upload your photo and provide details to get your custom artwork."
           centered
         >
@@ -100,17 +100,16 @@ const Order = () => {
             {/* Step 1: Choose Service & Size */}
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-4">1. Choose Your Service</h3>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                 {serviceOptions.map((option) => (
-                  <div 
+                  <div
                     key={option.value}
                     onClick={() => setSelectedService(option.value)}
-                    className={`p-4 border rounded-lg cursor-pointer flex items-center justify-between ${
-                      selectedService === option.value 
-                        ? "border-earthyBrown bg-earthyBeige/30" 
+                    className={`p-4 border rounded-lg cursor-pointer flex items-center justify-between ${selectedService === option.value
+                        ? "border-earthyBrown bg-earthyBeige/30"
                         : "hover:bg-gray-100"
-                    }`}
+                      }`}
                   >
                     <div>
                       <h4 className="font-medium">{option.label}</h4>
@@ -122,19 +121,18 @@ const Order = () => {
                   </div>
                 ))}
               </div>
-              
+
               <h3 className="text-xl font-semibold mb-4">2. Choose Size</h3>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {sizeOptions.map((option) => (
-                  <div 
+                  <div
                     key={option.value}
                     onClick={() => setSelectedSize(option.value)}
-                    className={`p-4 border rounded-lg cursor-pointer flex items-center justify-between ${
-                      selectedSize === option.value 
-                        ? "border-earthyBrown bg-earthyBeige/30" 
+                    className={`p-4 border rounded-lg cursor-pointer flex items-center justify-between ${selectedSize === option.value
+                        ? "border-earthyBrown bg-earthyBeige/30"
                         : "hover:bg-gray-100"
-                    }`}
+                      }`}
                   >
                     <div>
                       <h4 className="font-medium">{option.label}</h4>
@@ -151,13 +149,13 @@ const Order = () => {
             {/* Step 2: Upload Photo */}
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-4">3. Upload Your Photo</h3>
-              
+
               <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 flex flex-col items-center">
                 {photoPreview ? (
                   <div className="w-full text-center">
-                    <img 
-                      src={photoPreview} 
-                      alt="Photo preview" 
+                    <img
+                      src={photoPreview}
+                      alt="Photo preview"
                       className="max-h-64 mx-auto mb-4 rounded"
                     />
                     <p className="text-sm text-gray-600 mb-2">
@@ -199,7 +197,7 @@ const Order = () => {
             {/* Step 3: Personal Details */}
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-4">4. Your Details</h3>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -214,7 +212,7 @@ const Order = () => {
                     required
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                     Email Address*
@@ -229,7 +227,7 @@ const Order = () => {
                   />
                 </div>
               </div>
-              
+
               <div className="mb-4">
                 <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
                   Phone Number*
@@ -243,7 +241,7 @@ const Order = () => {
                   required
                 />
               </div>
-              
+
               <div className="mb-4">
                 <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-1">
                   Shipping Address*
@@ -257,7 +255,7 @@ const Order = () => {
                   required
                 ></textarea>
               </div>
-              
+
               <div>
                 <label htmlFor="notes" className="block text-sm font-medium text-gray-700 mb-1">
                   Special Instructions (Optional)
@@ -275,7 +273,7 @@ const Order = () => {
             {/* Order Summary */}
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-4">Order Summary</h3>
-              
+
               <div className="space-y-3 mb-6">
                 {selectedService && (
                   <div className="flex justify-between">
@@ -285,7 +283,7 @@ const Order = () => {
                     </span>
                   </div>
                 )}
-                
+
                 {selectedSize && (
                   <div className="flex justify-between">
                     <span>Size:</span>
@@ -295,20 +293,20 @@ const Order = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="pt-3 border-t font-semibold flex justify-between">
                   <span>Total:</span>
                   <span>${getTotalPrice()}</span>
                 </div>
               </div>
-              
+
               <div className="text-sm text-gray-500 mb-6">
                 <p>* Payment will be collected after order confirmation</p>
                 <p>* Shipping costs will be calculated based on your location</p>
               </div>
-              
-              <Button 
-                type="submit" 
+
+              <Button
+                type="submit"
                 disabled={isSubmitting || !selectedService || !selectedSize || !photoFile || !name || !email || !phone || !address}
                 className="w-full"
               >

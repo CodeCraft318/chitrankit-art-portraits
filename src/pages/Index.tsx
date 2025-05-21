@@ -1,13 +1,34 @@
 
 import Layout from "@/components/layout/Layout";
 import SectionTitle from "@/components/ui/SectionTitle";
-import Button from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import homeImage from "../assets/Image/homeImg.jpeg";
+
+import instaimg2 from "../assets/Image/insta2.png";
+import instaimg3 from "../assets/Image/insta3.png";
+import instaimg4 from "../assets/Image/insta4.jpg";
+
+
+
 
 const Index = () => {
+  // const getImageByItem = (item: number) => {
+  //   if (item === 1) return insta2;
+  //   if (item === 2) return insta3;
+  //   return insta4;
+  // };
+
+  // // JSX
+  // <img
+  //   src={getImageByItem(item)}
+  //   alt="Instagram preview"
+  //   className="rounded-lg shadow-lg object-cover w-full h-[400px]"
+  // />
+
+
   return (
     <Layout>
-      {/* Hero Section */}
       <section className="relative bg-gray-50 py-16 md:py-24">
         <div className="section-container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -29,13 +50,14 @@ const Index = () => {
             </div>
             <div className="relative animate-fade-in-up">
               <img
-                src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9"
+                src={homeImage}
                 alt="Sample artwork"
                 className="rounded-lg shadow-lg object-cover w-full h-[400px]"
               />
-              <div className="absolute -bottom-5 -left-5 bg-white p-3 rounded shadow-md hidden md:block">
+
+              {/* <div className="absolute -bottom-5 -left-5 bg-white p-3 rounded shadow-md hidden md:block">
                 <p className="text-sm font-medium">Handcrafted with ❤️</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -94,9 +116,9 @@ const Index = () => {
               <div key={item} className="overflow-hidden rounded-lg shadow-md group">
                 <div className="relative overflow-hidden aspect-square">
                   <img
-                    src={`https://images.unsplash.com/photo-${item === 1 ? "1618160702438-9b02ab6515c9" : item === 2 ? "1535268647677-300dbf3d78d1" : "1439886183900-e79ec0057170"}`}
-                    alt={`Featured artwork ${item}`}
-                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                    src={item === 1 ? instaimg2 : item === 2 ? instaimg3 : instaimg4}
+                    alt="Instagram preview"
+                    className="rounded-lg shadow-lg object-cover w-full h-[400px]"
                   />
                 </div>
                 <div className="p-4 bg-white">
@@ -115,7 +137,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+
       <section className="py-16 md:py-24">
         <div className="section-container">
           <div className="bg-earthyBeige p-8 md:p-12 rounded-lg text-center">

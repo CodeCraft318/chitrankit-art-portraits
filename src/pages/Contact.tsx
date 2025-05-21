@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import SectionTitle from "@/components/ui/SectionTitle";
-import Button from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import { toast } from "@/components/ui/use-toast";
 import { Instagram, MessageSquare, Phone } from "lucide-react";
 
@@ -12,7 +12,7 @@ const Contact = () => {
     email: "",
     message: ""
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -23,20 +23,20 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       toast({
         title: "Message sent!",
         description: "Thank you for contacting us. We'll get back to you soon.",
       });
-      
+
       setFormData({
         name: "",
         email: "",
         message: ""
       });
-      
+
       setIsSubmitting(false);
     }, 1000);
   };
@@ -44,7 +44,7 @@ const Contact = () => {
   return (
     <Layout>
       <div className="section-container">
-        <SectionTitle 
+        <SectionTitle
           subtitle="Have questions or want to discuss a custom order? Get in touch with us."
           centered
         >
@@ -55,7 +55,7 @@ const Contact = () => {
           {/* Contact Form */}
           <div>
             <h3 className="text-xl font-semibold mb-6">Send Us a Message</h3>
-            
+
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -71,7 +71,7 @@ const Contact = () => {
                   required
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                   Email
@@ -86,7 +86,7 @@ const Contact = () => {
                   required
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                   Message
@@ -101,7 +101,7 @@ const Contact = () => {
                   required
                 ></textarea>
               </div>
-              
+
               <div>
                 <Button type="submit" disabled={isSubmitting} className="w-full">
                   {isSubmitting ? "Sending..." : "Send Message"}
@@ -109,16 +109,16 @@ const Contact = () => {
               </div>
             </form>
           </div>
-          
+
           {/* Contact Information */}
           <div>
             <h3 className="text-xl font-semibold mb-6">Get In Touch</h3>
-            
+
             <p className="text-gray-600 mb-8">
-              We'd love to hear from you! Whether you have questions about our services, 
+              We'd love to hear from you! Whether you have questions about our services,
               need assistance with an order, or want to discuss a custom project, our team is here to help.
             </p>
-            
+
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="bg-earthyBeige p-3 rounded-full mr-4">
@@ -130,7 +130,7 @@ const Contact = () => {
                   <p className="text-sm text-gray-500">Monday-Friday, 10am-6pm IST</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="bg-earthyBeige p-3 rounded-full mr-4">
                   <MessageSquare size={20} className="text-earthyBrown" />
@@ -141,7 +141,7 @@ const Contact = () => {
                   <p className="text-sm text-gray-500">Quick responses within 24 hours</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="bg-earthyBeige p-3 rounded-full mr-4">
                   <Instagram size={20} className="text-earthyBrown" />
@@ -153,7 +153,7 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="mt-8 bg-gray-50 p-6 rounded-lg border">
               <h4 className="font-medium mb-3">Business Hours</h4>
               <ul className="space-y-2 text-gray-600">
@@ -173,11 +173,11 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        
+
         {/* FAQs */}
         <div className="mt-16 pt-8 border-t">
           <h3 className="text-2xl font-semibold mb-6 text-center">Frequently Asked Questions</h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="border rounded-lg p-6">
               <h4 className="font-medium mb-2">How long does it take to complete an artwork?</h4>
@@ -185,21 +185,21 @@ const Contact = () => {
                 Depending on complexity, most artworks take 7-14 days to complete. Rush orders are available for an additional fee.
               </p>
             </div>
-            
+
             <div className="border rounded-lg p-6">
               <h4 className="font-medium mb-2">Do you ship internationally?</h4>
               <p className="text-gray-600">
                 Yes, we ship worldwide! International shipping typically takes 7-14 business days.
               </p>
             </div>
-            
+
             <div className="border rounded-lg p-6">
               <h4 className="font-medium mb-2">What photo quality do you need?</h4>
               <p className="text-gray-600">
                 We recommend clear, well-lit photos for the best results. However, our artists can work with various photo qualities.
               </p>
             </div>
-            
+
             <div className="border rounded-lg p-6">
               <h4 className="font-medium mb-2">Can I request revisions?</h4>
               <p className="text-gray-600">

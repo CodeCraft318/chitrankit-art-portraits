@@ -7,18 +7,18 @@ interface SectionTitleProps extends HTMLAttributes<HTMLDivElement> {
   centered?: boolean;
 }
 
-const SectionTitle = ({ 
-  children, 
-  subtitle, 
+const SectionTitle = ({
+  children,
+  subtitle,
   centered = false,
   className,
-  ...props 
+  ...props
 }: SectionTitleProps) => {
   return (
-    <div 
+    <div
       className={cn(
         'mb-12',
-        centered ? 'text-center' : '',
+        centered ? 'flex flex-col items-center text-center' : '',
         className
       )}
       {...props}
@@ -27,13 +27,14 @@ const SectionTitle = ({
         {children}
       </h2>
       {subtitle && (
-        <p className="text-gray-600 max-w-2xl mt-2">
+        <p className={cn("text-gray-600 max-w-2xl mt-2", centered && "text-center")}>
           {subtitle}
         </p>
       )}
-      <div className={`h-1 w-20 bg-earthyBrown mt-4 ${centered ? 'mx-auto' : ''}`}></div>
+      <div className={cn("h-1 w-20 bg-earthyBrown mt-4", centered && "mx-auto")}></div>
     </div>
   );
 };
+
 
 export default SectionTitle;

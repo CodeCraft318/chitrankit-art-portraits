@@ -1,7 +1,7 @@
 
 import Layout from "@/components/layout/Layout";
 import SectionTitle from "@/components/ui/SectionTitle";
-import Button from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 
 const Services = () => {
   const services = [
@@ -46,7 +46,7 @@ const Services = () => {
   return (
     <Layout>
       <div className="section-container">
-        <SectionTitle 
+        <SectionTitle
           subtitle="Transform your photos into beautiful artwork with our range of custom sketching services."
           centered
         >
@@ -58,18 +58,18 @@ const Services = () => {
             <div key={service.id} className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div className={`order-1 ${service.id % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
                 <div className="rounded-lg overflow-hidden shadow-md">
-                  <img 
-                    src={service.image} 
-                    alt={service.title} 
+                  <img
+                    src={service.image}
+                    alt={service.title}
                     className="w-full h-64 object-cover"
                   />
                 </div>
               </div>
-              
+
               <div className={`order-2 ${service.id % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
                 <h3 className="text-2xl font-semibold mb-3 font-playfair">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
-                
+
                 <div className="bg-gray-50 p-5 rounded-lg mb-5">
                   <h4 className="font-medium mb-3">Features:</h4>
                   <ul className="space-y-2">
@@ -81,7 +81,7 @@ const Services = () => {
                     ))}
                   </ul>
                 </div>
-                
+
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between">
                   <div className="mb-4 sm:mb-0">
                     <p className="text-lg font-semibold text-earthyBrown">{service.price}</p>
@@ -97,7 +97,7 @@ const Services = () => {
         {/* Delivery Information */}
         <div className="mt-16 pt-8 border-t">
           <h3 className="text-2xl font-semibold mb-6">Delivery Information</h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <h4 className="text-lg font-medium mb-3">Shipping Details</h4>
@@ -123,7 +123,7 @@ const Services = () => {
                 </li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="text-lg font-medium mb-3">Additional Options</h4>
               <p className="text-gray-600 mb-3">
