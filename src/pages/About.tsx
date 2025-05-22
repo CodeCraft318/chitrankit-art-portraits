@@ -1,6 +1,11 @@
 
 import Layout from "@/components/layout/Layout";
 import SectionTitle from "@/components/ui/SectionTitle";
+import omkar from "../assets/Image/omkar.png";
+import insta2 from "../assets/Image/insta2.png"
+import insta4 from "../assets/Image/insta4.jpg"
+import insta6 from "../assets/Image/insta6.jpg"
+import insta10 from "../assets/Image/insta10.jpg"
 
 const About = () => {
   return (
@@ -30,40 +35,23 @@ const About = () => {
             <div className="flex flex-col md:flex-row gap-6 items-start">
               <div className="w-full md:w-40 h-40 rounded-full overflow-hidden flex-shrink-0 mb-4">
                 <img 
-                  src="https://images.unsplash.com/photo-1472396961693-142e6e269027" 
-                  alt="Raj" 
+                  src={omkar} 
+                  alt="Omkar Kalvitkar" 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Raj</h3>
+                <h3 className="text-xl font-semibold mb-2">Omkar Kalvitkar</h3>
                 <p className="text-gray-600 mb-4">
-                  With over 10 years of experience in portrait sketching, Raj brings a unique perspective to each artwork. His passion for capturing emotions and expressions began in his childhood and evolved into a lifelong pursuit of artistic excellence.
+                  With over 10 years of experience in portrait sketching, Omkar brings a unique perspective to each artwork. His passion for capturing emotions and expressions began in his childhood and evolved into a lifelong pursuit of artistic excellence.
                 </p>
                 <p className="text-gray-600">
-                  Raj specializes in pencil sketches that bring out the soul of the subject, focusing on the intricate details that make each person unique.
+                  Omkar specializes in pencil sketches that bring out the soul of the subject, focusing on the intricate details that make each person unique.
                 </p>
               </div>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-6 items-start">
-              <div className="w-full md:w-40 h-40 rounded-full overflow-hidden flex-shrink-0 mb-4">
-                <img 
-                  src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1" 
-                  alt="Omkar" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Omkar</h3>
-                <p className="text-gray-600 mb-4">
-                  Omkar discovered his love for colored portraits during his fine arts education. With a keen eye for color harmony and composition, he brings vibrancy and life to every piece he creates.
-                </p>
-                <p className="text-gray-600">
-                  His artistic journey has been influenced by both classical and contemporary styles, resulting in artwork that bridges tradition and modern aesthetics.
-                </p>
-              </div>
-            </div>
+            
           </div>
         </div>
 
@@ -166,10 +154,10 @@ const About = () => {
             </div>
             
             <div className="grid grid-cols-2 gap-4">
-              <img src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9" alt="Art process" className="rounded-lg shadow-md w-full h-48 object-cover" />
-              <img src="https://images.unsplash.com/photo-1439886183900-e79ec0057170" alt="Art process" className="rounded-lg shadow-md w-full h-48 object-cover" />
-              <img src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1" alt="Art process" className="rounded-lg shadow-md w-full h-48 object-cover" />
-              <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027" alt="Art process" className="rounded-lg shadow-md w-full h-48 object-cover" />
+              <img src={insta4} alt="Art process" className="rounded-lg shadow-md w-full h-80 object-cover" />
+              <img src= {insta10} alt="Art process" className="rounded-lg shadow-md w-full h-80 object-cover" />
+              <img src={insta6} alt="Art process" className="rounded-lg shadow-md w-full h-80 object-cover" />
+              <img src={insta2} alt="Art process" className="rounded-lg shadow-md w-full h-80 object-cover" />
             </div>
           </div>
         </div>

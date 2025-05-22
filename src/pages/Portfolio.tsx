@@ -3,6 +3,21 @@ import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import insta2 from "../assets/Image/insta2.png"
+import insta from "../assets/Image/insta.png"
+import insta3 from "../assets/Image/insta3.png"
+import insta4 from "../assets/Image/insta4.jpg"
+import insta5 from "../assets/Image/insta5.jpg"
+import insta6 from "../assets/Image/insta6.jpg"
+import insta7 from "../assets/Image/insta7.jpg"
+import insta8 from "../assets/Image/insta8.jpg"
+import insta9 from "../assets/Image/insta9.jpg"
+import insta10 from "../assets/Image/insta10.jpg"
+import insta11 from "../assets/Image/insta11.jpg"
+import insta12 from "../assets/Image/insta12.jpg"
+import insta13 from "../assets/Image/insta13.jpg"
+import insta14 from "../assets/Image/insta14.jpg"
+import insta15 from "../assets/Image/insta15.jpg"
 
 // Mock portfolio data
 const portfolioItems = [
@@ -10,42 +25,105 @@ const portfolioItems = [
     id: 1,
     title: "Father and Daughter",
     category: "family",
-    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
+    image: insta10,
     description: "Pencil sketch on premium paper, 11x14 inches"
   },
   {
     id: 2,
     title: "Wedding Portrait",
     category: "couple",
-    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04",
+    image: insta11,
     description: "Colored portrait, 12x16 inches"
   },
   {
     id: 3,
     title: "Tabby Cat",
     category: "pet",
-    image: "https://images.unsplash.com/photo-1535268647677-300dbf3d78d1",
+    image: insta4,
     description: "Pencil sketch on premium paper, 8x10 inches"
   },
   {
     id: 4,
     title: "Mother and Child",
     category: "family",
-    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
+    image: insta5,
     description: "Pencil sketch on premium paper, 11x14 inches"
   },
   {
     id: 5,
     title: "Deers in Forest",
     category: "pet",
-    image: "https://images.unsplash.com/photo-1439886183900-e79ec0057170",
+    image: insta6,
     description: "Colored portrait, 12x16 inches"
   },
   {
     id: 6,
     title: "Young Couple",
     category: "couple",
-    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
+    image: insta,
+    description: "Digital art portrait, 12x16 inches"
+  },
+   {
+    id: 7,
+    title: "Young Couple",
+    category: "couple",
+    image: insta2,
+    description: "Digital art portrait, 12x16 inches"
+  },
+  {
+    id: 8,
+    title: "Young Couple",
+    category: "couple",
+    image: insta3,
+    description: "Digital art portrait, 12x16 inches"
+  },
+  {
+    id: 9,
+    title: "Young Couple",
+    category: "couple",
+    image: insta7,
+    description: "Digital art portrait, 12x16 inches"
+  },
+  {
+    id: 10,
+    title: "Young Couple",
+    category: "couple",
+    image: insta8,
+    description: "Digital art portrait, 12x16 inches"
+  },
+  {
+    id: 11,
+    title: "Young Couple",
+    category: "couple",
+    image: insta9,
+    description: "Digital art portrait, 12x16 inches"
+  },
+   {
+    id: 12,
+    title: "Young Couple",
+    category: "couple",
+    image: insta12,
+    description: "Digital art portrait, 12x16 inches"
+  },
+   {
+    id: 13,
+    title: "Young Couple",
+    category: "couple",
+    image: insta13,
+    description: "Digital art portrait, 12x16 inches"
+  },
+   {
+    id: 14,
+    title: "Young Couple",
+    category: "couple",
+    image: insta14,
+    description: "Digital art portrait, 12x16 inches"
+  },
+   {
+    id: 15,
+    title: "Young Couple",
+    category: "couple",
+    image: insta15,
     description: "Digital art portrait, 12x16 inches"
   }
 ];

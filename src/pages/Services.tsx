@@ -1,7 +1,11 @@
-
 import Layout from "@/components/layout/Layout";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { Button } from "@/components/ui/button";
+import insta6 from "../assets/Image/insta6.jpg"
+import insta from "../assets/Image/insta.png"
+import insta5 from "../assets/Image/insta5.jpg"
+import insta2 from "../assets/Image/insta2.png"
+
 
 const Services = () => {
   const services = [
@@ -10,8 +14,8 @@ const Services = () => {
       title: "Pencil Sketch",
       description: "Classic black and white pencil sketches that capture the essence of your photos with stunning detail and shading.",
       features: ["High-quality drawing paper", "Multiple size options", "Framing available", "Digital copy included"],
-      price: "Starting at $49",
-      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
+      price: "Starting at ₹800+",
+      image: insta6,
       deliveryTime: "7-10 days"
     },
     {
@@ -19,26 +23,26 @@ const Services = () => {
       title: "Colored Portraits",
       description: "Vibrant colored portraits that bring your photos to life with rich hues and artistic flair.",
       features: ["Premium art paper", "Vibrant color application", "Multiple size options", "Framing available", "Digital copy included"],
-      price: "Starting at $79",
-      image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04",
+      price: "Starting at	₹1000+",
+      image: insta,
       deliveryTime: "10-14 days"
     },
     {
       id: 3,
-      title: "Couple/Family Portraits",
+      title: "Family Portraits",
       description: "Capture the bond between loved ones with our custom couple and family sketches.",
       features: ["Up to 4 people included", "Additional subjects at extra cost", "Various composition options", "Framing available"],
-      price: "Starting at $89",
-      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
+      price: "Starting at ₹1200+",
+      image: insta5,
       deliveryTime: "12-15 days"
     },
     {
       id: 4,
-      title: "Pet Sketches",
+      title: "Couples Sketches",
       description: "Immortalize your furry friends with charming pet portraits that capture their unique personality.",
       features: ["Detailed fur texture", "Character expression emphasis", "Various sizes available", "Perfect gift for pet lovers"],
-      price: "Starting at $59",
-      image: "https://images.unsplash.com/photo-1535268647677-300dbf3d78d1",
+      price: "Starting at ₹1000+",
+      image: insta2,
       deliveryTime: "7-10 days"
     },
   ];
@@ -131,24 +135,24 @@ const Services = () => {
               </p>
               <ul className="space-y-3 text-gray-600">
                 <li className="flex justify-between items-center">
-                  <span>Premium framing</span>
-                  <span className="font-medium">+$25</span>
+                  <span>Black framing</span>
+                  <span className="font-medium">+₹150</span>
                 </li>
                 <li className="flex justify-between items-center">
                   <span>Size upgrade (A3)</span>
-                  <span className="font-medium">+$15</span>
+                  <span className="font-medium">+₹100</span>
                 </li>
                 <li className="flex justify-between items-center">
                   <span>Express creation (4-5 days)</span>
-                  <span className="font-medium">+$20</span>
+                  <span className="font-medium">+₹200</span>
                 </li>
                 <li className="flex justify-between items-center">
                   <span>Express shipping (2-3 days)</span>
-                  <span className="font-medium">+$15</span>
+                  <span className="font-medium">+₹150</span>
                 </li>
                 <li className="flex justify-between items-center">
                   <span>Additional subjects in portrait</span>
-                  <span className="font-medium">+$20 each</span>
+                  <span className="font-medium">+₹180 each</span>
                 </li>
               </ul>
             </div>
