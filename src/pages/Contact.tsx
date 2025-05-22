@@ -20,26 +20,46 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const response = await fetch("https://formspree.io/f/mvganqlr", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for contacting us. We'll get back to you soon."
+        });
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        toast({
+          title: "Something went wrong!",
+          description: result?.error || "Unable to send your message. Please try again later.",
+          variant: "destructive"
+        });
+      }
+    } catch (error) {
       toast({
-        title: "Message sent!",
-        description: "Thank you for contacting us. We'll get back to you soon.",
+        title: "Error",
+        description: "Network error. Please try again later.",
+        variant: "destructive"
       });
-
-      setFormData({
-        name: "",
-        email: "",
-        message: ""
-      });
-
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
+
 
   return (
     <Layout>
