@@ -23,49 +23,49 @@ import insta15 from "../assets/Image/insta15.jpg"
 const portfolioItems = [
   {
     id: 1,
-    title: "Father and Daughter",
+    title: "Lord Hanuman",
     category: "family",
     image: insta10,
     description: "Pencil sketch on premium paper, 11x14 inches"
   },
   {
     id: 2,
-    title: "Wedding Portrait",
+    title: "Cinema Theme",
     category: "couple",
     image: insta11,
     description: "Colored portrait, 12x16 inches"
   },
   {
     id: 3,
-    title: "Tabby Cat",
+    title: "Personal Portriat",
     category: "pet",
     image: insta4,
     description: "Pencil sketch on premium paper, 8x10 inches"
   },
   {
     id: 4,
-    title: "Mother and Child",
+    title: "Family Portriat",
     category: "family",
     image: insta5,
     description: "Pencil sketch on premium paper, 11x14 inches"
   },
   {
     id: 5,
-    title: "Deers in Forest",
+    title: "Birthday Portriat",
     category: "pet",
     image: insta6,
-    description: "Colored portrait, 12x16 inches"
+    description: "Pencil sketch on premium paper, 11x14 inches"
   },
   {
     id: 6,
-    title: "Young Couple",
+    title: "Custom Lord Portriat",
     category: "couple",
     image: insta,
-    description: "Digital art portrait, 12x16 inches"
+    description: "Colored portrait, 4x5 feet"
   },
    {
     id: 7,
-    title: "Young Couple",
+    title: "Marriage Portrait",
     category: "couple",
     image: insta2,
     description: "Digital art portrait, 12x16 inches"
@@ -75,56 +75,56 @@ const portfolioItems = [
     title: "Young Couple",
     category: "couple",
     image: insta3,
-    description: "Digital art portrait, 12x16 inches"
+    description: "Pencil sketch on premium paper, 14x20 inches"
   },
   {
     id: 9,
-    title: "Young Couple",
+    title: "Radha-Krishna Portrait",
     category: "couple",
     image: insta7,
-    description: "Digital art portrait, 12x16 inches"
+    description: "Pencil sketch on premium paper, 11x14 inches"
   },
   {
     id: 10,
-    title: "Young Couple",
+    title: "Chritsmas Theme",
     category: "couple",
     image: insta8,
-    description: "Digital art portrait, 12x16 inches"
+    description: "Colored portrait, 12x16 inches"
   },
   {
     id: 11,
-    title: "Young Couple",
+    title: "Virat Kholi",
     category: "couple",
     image: insta9,
-    description: "Digital art portrait, 12x16 inches"
+    description: "Pencil sketch on premium pape, 12x16 inches"
   },
    {
     id: 12,
-    title: "Young Couple",
+    title: "Lord Shiva",
     category: "couple",
     image: insta12,
-    description: "Digital art portrait, 12x16 inches"
+    description: "Pencil sketch on premium pape, 12x16 inches"
   },
    {
     id: 13,
-    title: "Young Couple",
+    title: "Lord Shree Ram",
     category: "couple",
     image: insta13,
-    description: "Digital art portrait, 12x16 inches"
+    description: "Pencil sketch on premium pape, 12x16 inches"
   },
    {
     id: 14,
-    title: "Young Couple",
+    title: "Lord Vithal",
     category: "couple",
     image: insta14,
-    description: "Digital art portrait, 12x16 inches"
+    description: "Pencil sketch on premium pape, 12x16 inches"
   },
    {
     id: 15,
-    title: "Young Couple",
+    title: "Avenger End Games",
     category: "couple",
     image: insta15,
-    description: "Digital art portrait, 12x16 inches"
+    description: "DPencil sketch on premium pape, 12x16 inches"
   }
 ];
 
@@ -146,7 +146,7 @@ const Portfolio = () => {
           Our Portfolio
         </SectionTitle>
 
-        {/* Filter */}
+        {/* Filter
         <div className="flex flex-wrap justify-center gap-3 mb-10">
           <button
             className={`px-4 py-2 rounded-full text-sm ${
@@ -166,7 +166,7 @@ const Portfolio = () => {
             }`}
             onClick={() => setFilter("single")}
           >
-            Single
+            
           </button>
           <button
             className={`px-4 py-2 rounded-full text-sm ${
@@ -198,7 +198,7 @@ const Portfolio = () => {
           >
             Pet
           </button>
-        </div>
+        </div> */}
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
