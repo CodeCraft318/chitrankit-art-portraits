@@ -58,7 +58,7 @@ const Testimonials = () => {
   return (
     <Layout>
       <div className="section-container">
-        <SectionTitle 
+        <SectionTitle
           subtitle="Don't take our word for it—hear from our satisfied clients about their experience with Chitrankit."
           centered
         >
@@ -96,9 +96,9 @@ const Testimonials = () => {
             <div key={testimonial.id} className="border rounded-lg p-6 hover:shadow-md transition-shadow">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-                  <img 
-                    src={testimonial.image} 
-                    alt={testimonial.name} 
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -107,13 +107,13 @@ const Testimonials = () => {
                   <p className="text-sm text-gray-600">{testimonial.location}</p>
                 </div>
               </div>
-              
+
               <div className="flex mb-3">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star key={i} size={16} fill="#8B7355" stroke="#8B7355" />
                 ))}
               </div>
-              
+
               <p className="text-gray-700 italic">"{testimonial.text}"</p>
             </div>
           ))}
@@ -122,23 +122,23 @@ const Testimonials = () => {
         {/* Client Ratings Summary */}
         <div className="mt-16 bg-gray-50 p-8 rounded-lg">
           <h3 className="text-xl font-semibold mb-6 text-center">Why Our Clients Love Us</h3>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="text-4xl font-bold text-earthyBrown mb-2">98%</div>
               <p className="text-gray-600">Customer satisfaction</p>
             </div>
-            
+
             <div className="text-center">
               <div className="text-4xl font-bold text-earthyBrown mb-2">4.9</div>
               <p className="text-gray-600">Average rating</p>
             </div>
-            
+
             <div className="text-center">
-              <div className="text-4xl font-bold text-earthyBrown mb-2">500+</div>
+              <div className="text-4xl font-bold text-earthyBrown mb-2">100+</div>
               <p className="text-gray-600">Completed artworks</p>
             </div>
-            
+
             <div className="text-center">
               <div className="text-4xl font-bold text-earthyBrown mb-2">95%</div>
               <p className="text-gray-600">Repeat customers</p>
