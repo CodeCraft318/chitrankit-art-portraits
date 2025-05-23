@@ -5,6 +5,8 @@ import insta6 from "../assets/Image/insta6.jpg"
 import insta from "../assets/Image/insta.png"
 import insta5 from "../assets/Image/insta5.jpg"
 import insta2 from "../assets/Image/insta2.png"
+import insta20 from "../assets/Image/insta20.png"
+import insta21 from "../assets/Image/insta21.jpeg"
 
 
 const Services = () => {
@@ -45,6 +47,25 @@ const Services = () => {
       image: insta2,
       deliveryTime: "7-10 days"
     },
+     {
+      id: 5,
+      title: "Lord Shree Ram Mandir Model",
+      description: "HandMade Ram Mandir For decoration and Home Available Custom Size.",
+      features: ["Custom Size", "Eco-friendly Material use", "Strong and Durable"],
+      price: "Starting at ₹2000+",
+      image: insta20,
+      deliveryTime: "12-15 days"
+    },
+     {
+      id: 6,
+      title: "All Types Of Rangoli Potriat",
+      description: "Custome Rongoli Available Any Potrait Rongli for Festival And Function will be Created on Place.",
+      features: ["Premium Rangoli", "Vibrant color application", "Multiple size options"],
+      price: "Starting at	₹1500+ with material",
+      image: insta21,
+      deliveryTime: "1 days"
+    },
+    
   ];
 
   return (

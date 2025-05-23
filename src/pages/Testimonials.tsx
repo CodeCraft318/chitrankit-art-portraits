@@ -15,15 +15,15 @@ const testimonials = [
   {
     id: 2,
     name: "Rahul Mehta",
-    location: "Delhi, India",
+    location: "Mumbai, India",
     image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04",
     rating: 5,
-    text: "Received my pet portrait and I'm absolutely thrilled with the result! The artist captured my dog's personality perfectly. The quality of the work exceeded my expectations."
+    text: "Received my portrait and I'm absolutely thrilled with the result! The artist captured my dog's personality perfectly. The quality of the work exceeded my expectations."
   },
   {
     id: 3,
     name: "Anika Patel",
-    location: "Ahmedabad, India",
+    location: "Kalyan, India",
     image: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
     rating: 4,
     text: "Beautiful work on our family portrait. The artist was patient with our requests for minor adjustments, and the final piece is now the centerpiece of our living room."
@@ -31,7 +31,7 @@ const testimonials = [
   {
     id: 4,
     name: "Vikram Singh",
-    location: "Bangalore, India",
+    location: "Kalyan, India",
     image: "https://images.unsplash.com/photo-1535268647677-300dbf3d78d1",
     rating: 5,
     text: "I gifted a portrait to my wife on our anniversary and she absolutely loved it. The team at Chitrankit was professional, prompt, and the artwork was delivered well before the expected date."
@@ -39,7 +39,7 @@ const testimonials = [
   {
     id: 5,
     name: "Neha Sharma",
-    location: "Pune, India",
+    location: "Kalyan, India",
     image: "https://images.unsplash.com/photo-1439886183900-e79ec0057170",
     rating: 5,
     text: "This is the second time I've ordered from Chitrankit, and they've outdone themselves again. The colored portrait of my daughter is breathtaking. Will definitely recommend to friends and family!"
@@ -47,7 +47,7 @@ const testimonials = [
   {
     id: 6,
     name: "Arjun Kapoor",
-    location: "Kolkata, India",
+    location: "kalyan, India",
     image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
     rating: 4,
     text: "Impressive work on my wedding portrait. The artists have a great eye for detail and managed to capture our happiest moment beautifully. The packaging was also very secure."
@@ -65,7 +65,7 @@ const Testimonials = () => {
           Client Testimonials
         </SectionTitle>
 
-        {/* Featured Testimonial */}
+        {/* Featured Testimonial
         <div className="bg-earthyBeige p-6 md:p-10 rounded-lg mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="rounded-lg overflow-hidden">
@@ -88,7 +88,7 @@ const Testimonials = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
