@@ -166,9 +166,9 @@ const Services = () => {
                       Delivery time: {service.deliveryTime}
                     </p>
                   </div>
-                  <Button asChild>
+                  {/* <Button asChild>
                     <Link to="/order">Order Now</Link>
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             </div>
@@ -248,9 +248,9 @@ const Services = () => {
             Transform your precious photos into timeless art that you'll cherish
             forever.
           </p>
-          <Button href="/order" size="lg">
+          {/* <Button href="/order" size="lg">
             Place Your Order
-          </Button>
+          </Button> */}
         </div>
       </div>
     </Layout>

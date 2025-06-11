@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -12,7 +11,7 @@ const Navbar = () => {
     { name: "Services", path: "/services" },
     { name: "Portfolio", path: "/portfolio" },
     { name: "Testimonials", path: "/testimonials" },
-    { name: "Contact", path: "/contact" },
+    // { name: "Contact", path: "/contact" },
   ];
 
   return (
@@ -35,11 +34,8 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <Link 
-            to="/order" 
-            className="btn-primary"
-          >
-            Order Now
+          <Link to="/contact" className="btn-primary">
+            Contact Us
           </Link>
         </div>
 
@@ -71,13 +67,13 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Link 
-              to="/order" 
+            {/* <Link
+              to="/order"
               className="btn-primary text-center mt-4"
               onClick={() => setIsMenuOpen(false)}
             >
               Order Now
-            </Link>
+            </Link> */}
           </div>
         </div>
       )}

@@ -41,9 +41,9 @@ const Index = () => {
                   <Link to="/portfolio">View Portfolio</Link>
                 </Button>
 
-                <Button asChild variant="secondary" size="lg">
+                {/* <Button asChild variant="secondary" size="lg">
                   <Link to="/order">Order Now</Link>
-                </Button>
+                </Button> */}
               </div>
             </div>
             <div className="relative animate-fade-in-up">
@@ -161,7 +161,7 @@ const Index = () => {
               art that tells your unique story.
             </p>
             <Button asChild size="lg">
-              <Link to="/order">Get Started</Link>
+              <Link to="/contact">Get Started</Link>
             </Button>
           </div>
         </div>
